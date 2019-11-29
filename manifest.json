@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "frenchTabs",
+  "version": "0.1",
+
+  "description": "Opens a new tab with a french word and english translation",
+
+  "permissions": [
+    "tabs"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["frenchWords.js"]
+    }
+  ]
+
+}

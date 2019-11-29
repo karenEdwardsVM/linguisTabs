@@ -1,0 +1,16 @@
+* {
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+#keyInput {
+  height: 20px; 
+  font-size: 16px;
+}
+
+#submit {
+  font-size: 16px;
+}
+
+#keyword {
+  display: none;
+}

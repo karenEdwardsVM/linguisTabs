@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/vocabulary.js') }}"></script> --> 
+    <script type="text/javascript">
+      const row = JSON.parse({{ randRow|tojson }});
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/frenchWords.js') }}"></script>
+  </head>
+
+  <body>
+    <div id="container">
+      <h3>Words!</h3>
+      <h3 id="word"></h3>
+      <h3 id="definition"></h3>
+      <h3 id="keyword"></h3>
+      Enter a keyword: <input id="keyInput" type="text" name="keywordIn"> 
+      <button id="submit" type="button">Submit</button>
+    </div>
+  </body>
+</html>
