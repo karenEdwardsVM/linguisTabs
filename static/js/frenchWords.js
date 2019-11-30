@@ -1,4 +1,3 @@
-console.log("Learn French!");
 jsonHeaders = {
   'Content-Type': 'application/json'
 };
@@ -18,17 +17,25 @@ const displayWord = () => {
 };
 
 const writeKeyword = () => {
-  let newKey, response;
+  let keyBox, response;
   const url = new URL("http://localhost:6969/setKeyword");
   document.getElementById("submit").onclick = () => {
-    newKey = document.getElementById("keyInput").value;
-    const data = {word: row.word, keyword: newKey};
+    keyBox = document.getElementById("keyInput");
+    const data = {word: row.word, keyword: keyBox.value};
 
     response = fetch(url, {
       headers: jsonHeaders,
       method: "POST", 
       body: JSON.stringify(data)
     });
+    keyBox.value = "";
+    let keywordElement = document.getElementById("keyword");
+    if(keywordElement.textContent == "") {
+      createElement("keyword", "Keyword: ", data.keyword);
+    } else {
+      keywordElement.textContent = "Keyword: " + data.keyword;
+    }
+    keywordElement.style.display = "inherit";
     return response;
   };
 };
