@@ -49,7 +49,7 @@ def setKeyword():
     return {"message": "success"}
 
 @app.route('/')
-def display():
+def randWord():
     randRow = json.dumps(getRow())
     return render_template('displayWords.html', randRow=randRow)
 
