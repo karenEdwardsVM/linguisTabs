@@ -51,12 +51,13 @@ def setKeyword():
 @app.route('/')
 def randWord():
     randRow = json.dumps(getRow())
-    return render_template('displayWords.html', randRow=randRow)
+    #return render_template('displayWords.html', randRow=randRow)
+    return render_template('randWord.html', randRow=randRow)
 
 if __name__ == '__main__':
     try: 
         initDB()
-        app.run(debug = False, port = 6969)
+        app.run(debug = False, port = 6970)
     finally: 
         if connect: 
             connect.close()

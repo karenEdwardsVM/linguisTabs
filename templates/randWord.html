@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+  {% block head %}
+    <script type="text/javascript">
+      const row = JSON.parse({{ randRow|tojson }});
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/frenchWords.js') }}">
+    </script>
+  {% endblock %}
+
+  {% block content %}
+      <h3>Words!</h3>
+      <h3 id="word"></h3>
+      <h3 id="definition"></h3>
+      <h3 id="keyword"></h3>
+      Enter a keyword: <input id="keyInput" type="text" name="keywordIn"> 
+      <button id="submit" type="button">Submit</button>
+  {% endblock %}

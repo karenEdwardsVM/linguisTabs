@@ -18,12 +18,11 @@ const displayWord = () => {
 
 const writeKeyword = () => {
   let keyBox, response;
-  const url = new URL("http://localhost:6969/setKeyword");
   document.getElementById("submit").onclick = () => {
     keyBox = document.getElementById("keyInput");
     const data = {word: row.word, keyword: keyBox.value};
 
-    response = fetch(url, {
+    response = fetch("/setKeyword", {
       headers: jsonHeaders,
       method: "POST", 
       body: JSON.stringify(data)

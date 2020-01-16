@@ -1,10 +1,39 @@
 * {
   font-family: "Lucida Console", Monaco, monospace;
+  box-sizing: border-box;
+}
+
+body {
+}
+
+#navCont {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+  border-radius: 2px;
+  border: 2px solid black; 
+}
+
+li {
+  padding: 5px;
+  margin: 3px;
+  border-radius: 2px;
+  width: 120px;
+  text-align: center;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 #keyInput {
   height: 20px; 
   font-size: 16px;
+  margin: 10px;
 }
 
 #submit {
