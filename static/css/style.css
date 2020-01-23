@@ -3,9 +3,6 @@
   box-sizing: border-box;
 }
 
-body {
-}
-
 #navCont {
   display: flex;
   justify-content: flex-end;
@@ -23,21 +20,25 @@ li {
   text-align: center;
 }
 
-#container {
+#displayWords {
+  /*for the randWord tab*/
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
+  /* margin: 0px 40%; */
 }
 
 #keyInput {
   height: 20px; 
   font-size: 16px;
-  margin: 10px;
+  margin: 5px;
 }
 
 #submit {
   font-size: 16px;
+  margin-top: 10px;
 }
 
 #keyword {
